@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: 'FarmersDelight is unavailable; TrailTalesDelight has been disabled.'
+  enabled_summary: 'TrailTalesDelight loaded: {items} items, {blocks} custom blocks, {recipes} station recipes.'
+  disabled: 'TrailTalesDelight disabled.'
+  reloaded_with_reason: 'TrailTalesDelight reloaded: {reason}'
+  unsafe-reload: 'Do not /reload TrailTalesDelight. Restart the server instead.'
+  recipes-unsupported: 'This FarmersDelight build does not support addon recipe books; TrailTalesDelight has been disabled.'
+  config_update_failed: 'Could not update config.yml: {error}'
+  gui_missing: 'Bundled gui.yml is missing; using the built-in recipe layouts.'
+  gui_load_failed: 'Could not load gui.yml: {error}'
+  resources_installed: 'Wrote {count} CraftEngine resource files and removed {removed} stale files for {namespace} {version}.'
+  resources_install_failed: 'Could not install CraftEngine resources: {error}'
+recipe:
+  station:
+    cooking_pot: 'Cooking Pot'
+    cutting_board: 'Cutting Board'
+  cook_time: 'Cooking time: {seconds} seconds'
+language:
+  invalid_code: 'Invalid language code "{code}"; using zh_cn.'
+  load_failed: 'Could not load language "{code}"; using zh_cn.'
+  missing_bundled: 'Bundled language file is missing: {code}'
+  save_failed: 'Could not prepare language file "{file}": {error}'
+curd:
+  cannot_cut: 'Curd is not ripe yet'
+slice:
+  unavailable: 'The sliced item failed to load; restart the server'
+  food_full: 'You are not hungry enough to eat this.'
+feast:
+  bowl_required: 'Hold a bowl to take a serving.'
+  unavailable: 'The serving item failed to load; restart the server.'
+  empty: 'There is no food left here.'
+interaction:
+  unavailable: 'The food data is unavailable; restart the server.'

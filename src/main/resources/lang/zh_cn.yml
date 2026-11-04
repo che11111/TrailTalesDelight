@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: '未检测到可用的 FarmersDelight，TrailTalesDelight 已禁用。'
+  enabled_summary: 'TrailTalesDelight 已加载：{items} 个物品、{blocks} 个方块、{recipes} 个工作站配方。'
+  disabled: 'TrailTalesDelight 已停用。'
+  reloaded_with_reason: 'TrailTalesDelight 已重载：{reason}'
+  unsafe-reload: '请勿使用 /reload 重载 TrailTalesDelight，请重启服务器。'
+  recipes-unsupported: '当前 FarmersDelight 版本不支持附属配方书，TrailTalesDelight 已禁用。'
+  config_update_failed: '无法更新 config.yml：{error}'
+  gui_missing: '插件内置 gui.yml 缺失，将使用内置配方页布局。'
+  gui_load_failed: '无法加载 gui.yml：{error}'
+  resources_installed: '已写入 {count} 个 CraftEngine 资源文件，并清理 {removed} 个旧文件（{namespace} {version}）。'
+  resources_install_failed: '无法安装 CraftEngine 资源：{error}'
+recipe:
+  station:
+    cooking_pot: '烹饪锅'
+    cutting_board: '砧板'
+  cook_time: '烹饪时间：{seconds} 秒'
+language:
+  invalid_code: '语言代码“{code}”无效，已改用 zh_cn。'
+  load_failed: '无法加载语言“{code}”，已改用 zh_cn。'
+  missing_bundled: '插件内置语言文件缺失：{code}'
+  save_failed: '无法准备语言文件“{file}”：{error}'
+curd:
+  cannot_cut: '凝乳块未熟，无法切割'
+slice:
+  unavailable: '切片物品加载失败，请重启服务器'
+  food_full: '你并不饿，无法再吃。'
+feast:
+  bowl_required: '需要手持碗才能取餐。'
+  unavailable: '取餐物品加载失败，请重启服务器。'
+  empty: '这里已经没有食物了。'
+interaction:
+  unavailable: '食物数据异常，请重启服务器。'

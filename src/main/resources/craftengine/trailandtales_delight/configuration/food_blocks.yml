@@ -1,0 +1,433 @@
+templates:
+  trailandtales_delight:sliceable_food:
+    settings:
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      support_shape: minecraft:air
+      push_reaction: destroy
+      hardness: 0.5
+      template:
+        - default:hardness/none
+      tags:
+        - farmersdelight:pies
+        - farmersdelight:mineable/knife
+      sounds:
+        break: minecraft:block.wool.break
+        fall: minecraft:block.wool.fall
+        hit: minecraft:block.wool.hit
+        place: minecraft:block.wool.place
+        step: minecraft:block.wool.step
+    states:
+      properties:
+        bites:
+          type: int
+          default: 0
+          range: 0~3
+        facing:
+          type: 4-direction
+          default: north
+      appearances:
+        bite0_east:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_0
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        bite0_north:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_0
+            scale: 1.0
+            translation: 0,0,0
+        bite0_south:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_0
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        bite0_west:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_0
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        bite1_east:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_1
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        bite1_north:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_1
+            scale: 1.0
+            translation: 0,0,0
+        bite1_south:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_1
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        bite1_west:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_1
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        bite2_east:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_2
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        bite2_north:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_2
+            scale: 1.0
+            translation: 0,0,0
+        bite2_south:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_2
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        bite2_west:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_2
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        bite3_east:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_3
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        bite3_north:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_3
+            scale: 1.0
+            translation: 0,0,0
+        bite3_south:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_3
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        bite3_west:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:${__ID__}_display_3
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+      variants:
+        bites=0,facing=east:
+          appearance: bite0_east
+        bites=0,facing=north:
+          appearance: bite0_north
+        bites=0,facing=south:
+          appearance: bite0_south
+        bites=0,facing=west:
+          appearance: bite0_west
+        bites=1,facing=east:
+          appearance: bite1_east
+        bites=1,facing=north:
+          appearance: bite1_north
+        bites=1,facing=south:
+          appearance: bite1_south
+        bites=1,facing=west:
+          appearance: bite1_west
+        bites=2,facing=east:
+          appearance: bite2_east
+        bites=2,facing=north:
+          appearance: bite2_north
+        bites=2,facing=south:
+          appearance: bite2_south
+        bites=2,facing=west:
+          appearance: bite2_west
+        bites=3,facing=east:
+          appearance: bite3_east
+        bites=3,facing=north:
+          appearance: bite3_north
+        bites=3,facing=south:
+          appearance: bite3_south
+        bites=3,facing=west:
+          appearance: bite3_west
+
+  trailandtales_delight:feast:
+    settings:
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      support_shape: minecraft:sniffer_egg[hatch=0]
+      push_reaction: destroy
+      hardness: 0.5
+      template:
+        - default:hardness/none
+      tags:
+        - farmersdelight:feasts
+      sounds:
+        break: minecraft:block.metal.break
+        fall: minecraft:block.metal.fall
+        hit: minecraft:block.metal.hit
+        place: minecraft:block.metal.place
+        step: minecraft:block.metal.step
+    states:
+      properties:
+        servings:
+          type: int
+          default: 4
+          range: 0~4
+
+blocks:
+  trailandtales_delight:cherry_cake:
+    template: trailandtales_delight:sliceable_food
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                bites: 0
+          entries:
+            - type: item
+              item: trailandtales_delight:cherry_cake
+              count: 1
+
+  trailandtales_delight:cherry_cheese_pie:
+    template: trailandtales_delight:sliceable_food
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                bites: 0
+          entries:
+            - type: item
+              item: trailandtales_delight:cherry_cheese_pie
+              count: 1
+
+  trailandtales_delight:cheese_wheel:
+    template: trailandtales_delight:sliceable_food
+    settings:
+      hardness: 0.5
+      resistance: 6
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                bites: 0
+          entries:
+            - type: item
+              item: trailandtales_delight:cheese_wheel
+              count: 1
+
+  trailandtales_delight:cooked_sniffer_egg_block:
+    template: trailandtales_delight:feast
+    states:
+      properties:
+        servings:
+          type: int
+          default: 4
+          range: 0~4
+      appearances:
+        cooked_egg:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:cooked_sniffer_egg_block_display
+            scale: 1.0
+            translation: 0,0,0
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 4
+          entries:
+            - type: item
+              item: trailandtales_delight:cooked_sniffer_egg_block
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 3
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 2
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 1
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1
+
+  trailandtales_delight:stuffed_sniffer_egg_block:
+    template: trailandtales_delight:feast
+    settings:
+      support_shape: minecraft:sniffer_egg[hatch=0]
+    states:
+      properties:
+        servings:
+          type: int
+          default: 4
+          range: 0~4
+      appearances:
+        stage_4:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:stuffed_sniffer_egg_block_display_4
+            scale: 1.0
+            translation: 0,0,0
+        stage_3:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:stuffed_sniffer_egg_block_display_3
+            scale: 1.0
+            translation: 0,0,0
+        stage_2:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:stuffed_sniffer_egg_block_display_2
+            scale: 1.0
+            translation: 0,0,0
+        stage_1:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:stuffed_sniffer_egg_block_display_1
+            scale: 1.0
+            translation: 0,0,0
+        stage_0:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:sniffer_eggshell
+            scale: 1.0
+            translation: 0,0,0
+      variants:
+        servings=4:
+          appearance: stage_4
+        servings=3:
+          appearance: stage_3
+        servings=2:
+          appearance: stage_2
+        servings=1:
+          appearance: stage_1
+        servings=0:
+          appearance: stage_0
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 4
+          entries:
+            - type: item
+              item: trailandtales_delight:stuffed_sniffer_egg_block
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 3
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 2
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                servings: 1
+          entries:
+            - type: item
+              item: trailandtales_delight:sniffer_eggshell
+              count: 1

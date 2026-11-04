@@ -1,0 +1,473 @@
+recipes:
+  trailandtales_delight:cheese_wheel:
+    type: shaped
+    category: misc
+    group: cheese_wheel
+    pattern:
+      - "CC"
+      - "CC"
+    ingredients:
+      C: trailandtales_delight:cheese_slice
+    result:
+      id: trailandtales_delight:cheese_wheel
+      count: 1
+
+  trailandtales_delight:mud_stove:
+    type: shaped
+    category: building
+    group: trailandtales_stations
+    pattern:
+      - "MMM"
+      - "MFM"
+      - "MMM"
+    ingredients:
+      M: minecraft:packed_mud
+      F: minecraft:campfire
+    result:
+      id: trailandtales_delight:mud_stove
+      count: 1
+
+  trailandtales_delight:pottery_cooking_pot:
+    type: shaped
+    category: building
+    group: trailandtales_stations
+    pattern:
+      - "BBB"
+      - "B B"
+      - "BCB"
+    ingredients:
+      B: minecraft:brick
+      C: minecraft:cauldron
+    result:
+      id: trailandtales_delight:pottery_cooking_pot
+      count: 1
+
+  trailandtales_delight:cherry_iron_knife:
+    type: smithing_transform
+    base: farmersdelight:iron_knife
+    addition: minecraft:cherry_planks
+    result:
+      id: trailandtales_delight:cherry_iron_knife
+      count: 1
+
+  trailandtales_delight:sniffer_eggshell_knife:
+    type: smithing_transform
+    base: farmersdelight:iron_knife
+    addition:
+      items:
+        - minecraft:sniffer_egg
+        - trailandtales_delight:sniffer_eggshell
+    result:
+      id: trailandtales_delight:sniffer_eggshell_knife
+      count: 1
+
+  trailandtales_delight:pottery_bowl:
+    type: shaped
+    category: misc
+    pattern:
+      - "B B"
+      - "BBB"
+    ingredients:
+      B: minecraft:brick
+    result:
+      id: trailandtales_delight:pottery_bowl
+      count: 1
+
+  trailandtales_delight:lantern_fruit_crate:
+    type: shaped
+    category: building
+    group: trailandtales_crate
+    pattern:
+      - "FFF"
+      - "FFF"
+      - "FFF"
+    ingredients:
+      F: trailandtales_delight:lantern_fruit
+    result:
+      id: trailandtales_delight:lantern_fruit_crate
+      count: 1
+
+  trailandtales_delight:lantern_fruit_crate_unpack:
+    type: shapeless
+    category: misc
+    group: trailandtales_crate
+    ingredients:
+      - trailandtales_delight:lantern_fruit_crate
+    result:
+      id: trailandtales_delight:lantern_fruit
+      count: 9
+
+  trailandtales_delight:pitcher_taro_crate:
+    type: shaped
+    category: building
+    group: trailandtales_crate
+    pattern:
+      - "TTT"
+      - "TTT"
+      - "TTT"
+    ingredients:
+      T: trailandtales_delight:pitcher_taro
+    result:
+      id: trailandtales_delight:pitcher_taro_crate
+      count: 1
+
+  trailandtales_delight:pitcher_taro_crate_unpack:
+    type: shapeless
+    category: misc
+    group: trailandtales_crate
+    ingredients:
+      - trailandtales_delight:pitcher_taro_crate
+    result:
+      id: trailandtales_delight:pitcher_taro
+      count: 9
+
+  trailandtales_delight:cherry_cake:
+    type: shaped
+    category: misc
+    pattern:
+      - "PMP"
+      - "SES"
+      - "WWW"
+    ingredients:
+      P: trailandtales_delight:cherry_petal
+      M: minecraft:milk_bucket
+      S: minecraft:sugar
+      E: minecraft:egg
+      W: minecraft:wheat
+    result:
+      id: trailandtales_delight:cherry_cake
+      count: 1
+
+  trailandtales_delight:cherry_cake_from_slices:
+    type: shapeless
+    category: misc
+    group: cherry_cake
+    ingredients:
+      - trailandtales_delight:cherry_cake_slice
+      - trailandtales_delight:cherry_cake_slice
+      - trailandtales_delight:cherry_cake_slice
+      - trailandtales_delight:cherry_cake_slice
+    result:
+      id: trailandtales_delight:cherry_cake
+      count: 1
+
+  trailandtales_delight:cherry_cheese_slice:
+    type: shapeless
+    category: misc
+    group: cherry_cheese
+    ingredients:
+      - trailandtales_delight:cheese_slice
+      - trailandtales_delight:cherry_petal
+    result:
+      id: trailandtales_delight:cherry_cheese_slice
+      count: 1
+
+  trailandtales_delight:cherry_cheese_pie:
+    type: shaped
+    category: misc
+    group: cherry_cheese_pie
+    pattern:
+      - "CCC"
+      - " P "
+    ingredients:
+      C: trailandtales_delight:cherry_cheese_slice
+      P: farmersdelight:pie_crust
+    result:
+      id: trailandtales_delight:cherry_cheese_pie
+      count: 1
+
+  trailandtales_delight:cherry_cheese_pie_from_slices:
+    type: shapeless
+    category: misc
+    group: cherry_cheese_pie
+    ingredients:
+      - trailandtales_delight:cherry_cheese_pie_slice
+      - trailandtales_delight:cherry_cheese_pie_slice
+      - trailandtales_delight:cherry_cheese_pie_slice
+      - trailandtales_delight:cherry_cheese_pie_slice
+    result:
+      id: trailandtales_delight:cherry_cheese_pie
+      count: 1
+
+  trailandtales_delight:golden_lantern_fruit:
+    type: shaped
+    category: misc
+    pattern:
+      - "GGG"
+      - "GFG"
+      - "GGG"
+    ingredients:
+      G: minecraft:gold_nugget
+      F: trailandtales_delight:lantern_fruit
+    result:
+      id: trailandtales_delight:golden_lantern_fruit
+      count: 1
+
+  trailandtales_delight:stuffed_sniffer_egg:
+    type: shapeless
+    category: misc
+    ingredients:
+      - trailandtales_delight:fried_sniffer_egg
+      - trailandtales_delight:cooked_pitcher_taro
+      - minecraft:bowl
+    result:
+      id: trailandtales_delight:stuffed_sniffer_egg
+      count: 1
+
+  trailandtales_delight:stuffed_sniffer_egg_block:
+    type: shapeless
+    category: misc
+    ingredients:
+      - trailandtales_delight:stuffed_sniffer_egg
+      - trailandtales_delight:stuffed_sniffer_egg
+      - trailandtales_delight:stuffed_sniffer_egg
+      - trailandtales_delight:stuffed_sniffer_egg
+    result:
+      id: trailandtales_delight:stuffed_sniffer_egg_block
+      count: 1
+
+  trailandtales_delight:baked_torchflower_seeds:
+    type: smelting
+    category: misc
+    time: 200
+    experience: 0.35
+    ingredient: minecraft:torchflower_seeds
+    result:
+      id: trailandtales_delight:baked_torchflower_seeds
+      count: 1
+
+  trailandtales_delight:baked_torchflower_seeds_smoking:
+    type: smoking
+    category: misc
+    time: 100
+    experience: 0.35
+    ingredient: minecraft:torchflower_seeds
+    result:
+      id: trailandtales_delight:baked_torchflower_seeds
+      count: 1
+
+  trailandtales_delight:baked_torchflower_seeds_campfire:
+    type: campfire_cooking
+    category: misc
+    time: 600
+    experience: 0.35
+    ingredient: minecraft:torchflower_seeds
+    result:
+      id: trailandtales_delight:baked_torchflower_seeds
+      count: 1
+
+  trailandtales_delight:baked_pitcher_pod:
+    type: smelting
+    category: misc
+    time: 200
+    experience: 0.35
+    ingredient: minecraft:pitcher_pod
+    result:
+      id: trailandtales_delight:baked_pitcher_pod
+      count: 1
+
+  trailandtales_delight:baked_pitcher_pod_smoking:
+    type: smoking
+    category: misc
+    time: 100
+    experience: 0.35
+    ingredient: minecraft:pitcher_pod
+    result:
+      id: trailandtales_delight:baked_pitcher_pod
+      count: 1
+
+  trailandtales_delight:baked_pitcher_pod_campfire:
+    type: campfire_cooking
+    category: misc
+    time: 600
+    experience: 0.35
+    ingredient: minecraft:pitcher_pod
+    result:
+      id: trailandtales_delight:baked_pitcher_pod
+      count: 1
+
+  trailandtales_delight:cooked_pitcher_taro:
+    type: smelting
+    category: misc
+    time: 200
+    experience: 0.35
+    ingredient: trailandtales_delight:pitcher_taro
+    result:
+      id: trailandtales_delight:cooked_pitcher_taro
+      count: 1
+
+  trailandtales_delight:cooked_pitcher_taro_smoking:
+    type: smoking
+    category: misc
+    time: 100
+    experience: 0.35
+    ingredient: trailandtales_delight:pitcher_taro
+    result:
+      id: trailandtales_delight:cooked_pitcher_taro
+      count: 1
+
+  trailandtales_delight:cooked_pitcher_taro_campfire:
+    type: campfire_cooking
+    category: misc
+    time: 600
+    experience: 0.35
+    ingredient: trailandtales_delight:pitcher_taro
+    result:
+      id: trailandtales_delight:cooked_pitcher_taro
+      count: 1
+
+  trailandtales_delight:dried_cherry_petal:
+    type: smelting
+    category: misc
+    time: 200
+    experience: 0.1
+    ingredient: trailandtales_delight:cherry_petal
+    result:
+      id: trailandtales_delight:dried_cherry_petal
+      count: 1
+
+  trailandtales_delight:dried_cherry_petal_smoking:
+    type: smoking
+    category: misc
+    time: 100
+    experience: 0.1
+    ingredient: trailandtales_delight:cherry_petal
+    result:
+      id: trailandtales_delight:dried_cherry_petal
+      count: 1
+
+  trailandtales_delight:dried_cherry_petal_campfire:
+    type: campfire_cooking
+    category: misc
+    time: 600
+    experience: 0.1
+    ingredient: trailandtales_delight:cherry_petal
+    result:
+      id: trailandtales_delight:dried_cherry_petal
+      count: 1
+
+  trailandtales_delight:cooked_sniffer_egg_block:
+    type: smelting
+    category: misc
+    time: 300
+    experience: 0.5
+    ingredient: minecraft:sniffer_egg
+    result:
+      id: trailandtales_delight:cooked_sniffer_egg_block
+      count: 1
+
+  trailandtales_delight:fried_sniffer_egg:
+    type: smoking
+    category: misc
+    time: 100
+    experience: 0.35
+    ingredient: minecraft:sniffer_egg
+    result:
+      id: trailandtales_delight:fried_sniffer_egg
+      count: 1
+
+  trailandtales_delight:fried_sniffer_egg_campfire:
+    type: campfire_cooking
+    category: misc
+    time: 600
+    experience: 0.35
+    ingredient: minecraft:sniffer_egg
+    result:
+      id: trailandtales_delight:fried_sniffer_egg
+      count: 1
+
+cooking_recipes:
+  trailandtales_delight:curd_block:
+    ingredients:
+      - minecraft:milk_bucket
+      - minecraft:milk_bucket
+      - minecraft:milk_bucket
+      - minecraft:milk_bucket
+      - minecraft:sugar|minecraft:honey_bottle
+      - minecraft:sugar|minecraft:honey_bottle
+    result: trailandtales_delight:curd_block
+    experience: 0.8
+    cook-time: 600
+    category: misc
+
+  trailandtales_delight:cherry_petal_tea:
+    ingredients:
+      - minecraft:water_bucket
+      - trailandtales_delight:cherry_petal
+      - minecraft:sugar
+    container: minecraft:glass_bottle
+    result: trailandtales_delight:cherry_petal_tea
+    experience: 0.2
+    cook-time: 200
+    category: drinks
+
+  trailandtales_delight:torchflower_tea:
+    ingredients:
+      - minecraft:water_bucket
+      - minecraft:torchflower
+      - minecraft:sugar
+    container: minecraft:glass_bottle
+    result: trailandtales_delight:torchflower_tea
+    experience: 0.2
+    cook-time: 200
+    category: drinks
+
+  trailandtales_delight:pitcher_plant_tea:
+    ingredients:
+      - minecraft:water_bucket
+      - minecraft:pitcher_plant
+      - minecraft:sugar
+    container: minecraft:glass_bottle
+    result: trailandtales_delight:pitcher_plant_tea
+    experience: 0.2
+    cook-time: 200
+    category: drinks
+
+  trailandtales_delight:ancient_coffee:
+    ingredients:
+      - minecraft:water_bucket
+      - minecraft:cocoa_beans
+      - minecraft:torchflower
+    container: minecraft:glass_bottle
+    result: trailandtales_delight:ancient_coffee
+    experience: 0.5
+    cook-time: 300
+    category: drinks
+
+  trailandtales_delight:stuffed_sniffer_egg_block:
+    ingredients:
+      - trailandtales_delight:fried_sniffer_egg
+      - trailandtales_delight:cooked_pitcher_taro
+      - minecraft:baked_potato
+      - minecraft:carrot
+      - minecraft:bowl
+    result: trailandtales_delight:stuffed_sniffer_egg_block
+    experience: 1.0
+    cook-time: 400
+    category: meals
+
+cutting_recipes:
+  trailandtales_delight:cheese_wheel:
+    input: trailandtales_delight:cheese_wheel
+    tool: "#farmersdelight:tools/knives"
+    results:
+      - item: trailandtales_delight:cheese_slice
+        count: 4
+  trailandtales_delight:cherry_cake:
+    input: trailandtales_delight:cherry_cake
+    tool: "#farmersdelight:tools/knives"
+    results:
+      - item: trailandtales_delight:cherry_cake_slice
+        count: 4
+  trailandtales_delight:cherry_cheese_pie:
+    input: trailandtales_delight:cherry_cheese_pie
+    tool: "#farmersdelight:tools/knives"
+    results:
+      - item: trailandtales_delight:cherry_cheese_pie_slice
+        count: 4
+  trailandtales_delight:pitcher_taro_from_pitcher_plant:
+    input: minecraft:pitcher_plant
+    tool: "#farmersdelight:tools/knives"
+    results:
+      - item: trailandtales_delight:pitcher_taro
+        count: 1

@@ -1,0 +1,39 @@
+config-version: 3
+
+# 可用语言：zh_cn（默认）、en_us、auto，或 lang/<code>.yml 中的任意语言代码。
+# Available languages: zh_cn (default), en_us, auto, or any language code in lang/<code>.yml.
+language: zh_cn
+
+craftengine-resources:
+  # 启动时补回本附属命名空间中缺失的资源文件。
+  # Restore files missing from this addon's namespace on startup.
+  auto-completion: true
+  # 插件版本变化时替换所属资源包，并删除新版本不再分发的文件。
+  # 设为 false 可保留手动修改。
+  # Replace the owned pack when this plugin's version changes, including deleting files
+  # no longer bundled. Set false to preserve manual edits.
+  update-on-version-change: true
+
+# FarmersDelight 自定义效果，持续时间单位为秒。
+# FarmersDelight's custom effects. Durations are seconds.
+food-effects:
+  comfort:
+    - id: trailandtales_delight:ancient_coffee
+      duration: 180
+    - id: trailandtales_delight:torchflower_tea
+      duration: 180
+    - id: trailandtales_delight:pitcher_plant_tea
+      duration: 180
+    - id: trailandtales_delight:cherry_petal_tea
+      duration: 180
+  nourishment:
+    - id: trailandtales_delight:stuffed_sniffer_egg
+      duration: 300
+
+# 在不替换原版战利品表的前提下追加小型战利品整合。
+# Adds the mod's small vanilla-loot integrations without replacing the base tables.
+vanilla-loot:
+  cherry-leaf-petal-chance: 0.02
+  sniffer-dig-lantern-seed-chance: 0.33
+  desert-well-pottery-pot-chance: 0.10
+  desert-well-mud-stove-chance: 0.10

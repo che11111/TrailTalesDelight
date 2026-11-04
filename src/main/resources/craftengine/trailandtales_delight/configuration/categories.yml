@@ -1,0 +1,38 @@
+categories:
+  trailandtales_delight:items:
+    name: <!i><gold><lang:trailandtales_delight.category></gold>
+    icon: trailandtales_delight:cooked_sniffer_egg_block
+    list:
+      - trailandtales_delight:mud_stove
+      - trailandtales_delight:pottery_cooking_pot
+      - trailandtales_delight:lantern_fruit_crate
+      - trailandtales_delight:pitcher_taro_crate
+      - trailandtales_delight:pottery_bowl
+      - trailandtales_delight:cherry_iron_knife
+      - trailandtales_delight:sniffer_eggshell_knife
+      - trailandtales_delight:baked_torchflower_seeds
+      - trailandtales_delight:baked_pitcher_pod
+      - trailandtales_delight:cherry_petal
+      - trailandtales_delight:dried_cherry_petal
+      - trailandtales_delight:pitcher_taro
+      - trailandtales_delight:cooked_pitcher_taro
+      - trailandtales_delight:lantern_fruit
+      - trailandtales_delight:golden_lantern_fruit
+      - trailandtales_delight:lantern_fruit_seeds
+      - trailandtales_delight:fried_sniffer_egg
+      - trailandtales_delight:ancient_coffee
+      - trailandtales_delight:torchflower_tea
+      - trailandtales_delight:cherry_petal_tea
+      - trailandtales_delight:pitcher_plant_tea
+      - trailandtales_delight:curd_block
+      - trailandtales_delight:cherry_cake
+      - trailandtales_delight:cherry_cheese_pie
+      - trailandtales_delight:cheese_wheel
+      - trailandtales_delight:cherry_cake_slice
+      - trailandtales_delight:cherry_cheese_pie_slice
+      - trailandtales_delight:cheese_slice
+      - trailandtales_delight:cherry_cheese_slice
+      - trailandtales_delight:sniffer_eggshell
+      - trailandtales_delight:cooked_sniffer_egg_block
+      - trailandtales_delight:stuffed_sniffer_egg_block
+      - trailandtales_delight:stuffed_sniffer_egg

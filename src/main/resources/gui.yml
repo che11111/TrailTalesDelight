@@ -1,0 +1,75 @@
+# “樱途旅事”独立配方页。修改后执行 /fd reload all。
+# "Trail & Tales Delight" standalone recipe page. Run /fd reload all after editing.
+# 文本支持 MiniMessage、CraftEngine <image:...>/<shift:...> 和客户端语言标签 <lang:...>。
+# Text supports MiniMessage, CraftEngine <image:...>/<shift:...>, and client language tags <lang:...>.
+trail-recipes:
+  category-title: "<lang:block.trailandtales_delight.pottery_cooking_pot>"
+  list:
+    title: "<white><offset><icon><shift:-163><black><lang:trailandtales_delight.recipe.list_title> <gray>{page}/{total}</gray>"
+    title-layout:
+      craftengine:
+        offset: "<shift:-2>"
+        icon: "<image:farmersdelight:recipelist>"
+    rows: 6
+    layout:
+      - "RRRRRRRRR"
+      - "RRRRRRRRR"
+      - "RRRRRRRRR"
+      - "RRRRRRRRR"
+      - "RRRRRRRRR"
+      - "PXXXBXXXN"
+    legend:
+      R: recipe
+      P: prev_page
+      N: next_page
+      B: back
+      X: background
+    items:
+      background:
+        material: GRAY_STAINED_GLASS_PANE
+        item_model: "minecraft:air"
+        name: " "
+        hide-tooltip: true
+      prev_page:
+        material: ARROW
+        item_model: "minecraft:air"
+        name: "<green><lang:gui.recipe.prev_page>"
+      next_page:
+        material: ARROW
+        item_model: "minecraft:air"
+        name: "<green><lang:gui.recipe.next_page>"
+      back:
+        material: BARRIER
+        name: "<red><lang:gui.recipe.close>"
+
+  detail:
+    title: "<white><offset><icon><shift:-163><black><lang:trailandtales_delight.recipe.detail_title>"
+    title-layout:
+      craftengine:
+        offset: "<shift:-2>"
+        icon: "<image:farmersdelight:cooking_pot_menu>"
+    rows: 6
+    layout:
+      - "BXXXXXXXX"
+      - "XXXXXXXXX"
+      - "XIIIXXXXX"
+      - "XIIIXXXXX"
+      - "XXTXXCXRX"
+      - "XXXXXXXXX"
+    legend:
+      I: ingredient
+      R: result
+      T: tool
+      C: return
+      B: back
+      X: background
+    items:
+      background:
+        material: LIGHT_GRAY_STAINED_GLASS_PANE
+        item_model: "minecraft:air"
+        name: " "
+        hide-tooltip: true
+      back:
+        material: ARROW
+        item_model: "minecraft:air"
+        name: "<white><lang:gui.recipe.back>"

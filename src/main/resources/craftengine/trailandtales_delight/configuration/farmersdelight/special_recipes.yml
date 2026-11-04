@@ -1,0 +1,18 @@
+special_recipes:
+  trailandtales_delight:curd_aging:
+    title: gui.special_recipe.trailandtales_delight.curd_aging.title
+    icon: trailandtales_delight:cheese_wheel
+    description:
+      - gui.special_recipe.trailandtales_delight.curd_aging.desc.0
+      - gui.special_recipe.trailandtales_delight.curd_aging.desc.1
+    display-type: recipe
+    inputs:
+      - item: trailandtales_delight:curd_block
+        name: gui.special_recipe.trailandtales_delight.curd_aging.input
+    outputs:
+      - item: trailandtales_delight:cheese_wheel
+        name: gui.special_recipe.trailandtales_delight.curd_aging.output
+    conditions:
+      sunlight: false
+      water: false
+      catalyst_info: false

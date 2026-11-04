@@ -1,0 +1,13 @@
+translations:
+  en:
+    gui.special_recipe.trailandtales_delight.curd_aging.title: "Curd Aging"
+    gui.special_recipe.trailandtales_delight.curd_aging.desc.0: "Place a curd block where the light level is 8 or lower."
+    gui.special_recipe.trailandtales_delight.curd_aging.desc.1: "After some time, it ripens into a cheese wheel."
+    gui.special_recipe.trailandtales_delight.curd_aging.input: "Curd Block"
+    gui.special_recipe.trailandtales_delight.curd_aging.output: "Cheese Wheel"
+  zh_cn:
+    gui.special_recipe.trailandtales_delight.curd_aging.title: "凝乳块熟成"
+    gui.special_recipe.trailandtales_delight.curd_aging.desc.0: "将凝乳块放置在亮度不高于 8 的地方。"
+    gui.special_recipe.trailandtales_delight.curd_aging.desc.1: "静置一段时间后，它会熟成为奶酪轮。"
+    gui.special_recipe.trailandtales_delight.curd_aging.input: "凝乳块"
+    gui.special_recipe.trailandtales_delight.curd_aging.output: "奶酪轮"

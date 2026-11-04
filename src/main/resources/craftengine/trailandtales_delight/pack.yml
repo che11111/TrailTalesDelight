@@ -1,0 +1,5 @@
+author: Trail&TalesDelight
+version: ${version}
+description: Trail & Tales Delight - CraftEngine content pack
+namespace: trailandtales_delight
+enable: true

@@ -1,0 +1,682 @@
+blocks:
+  trailandtales_delight:mud_stove:
+    settings:
+      hardness: 2
+      resistance: 5
+      push-reaction: block
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      support_shape: minecraft:blast_furnace[facing=north,lit=false]
+      require-correct-tools: true
+      correct-tools:
+        - minecraft:wooden_pickaxe
+        - minecraft:stone_pickaxe
+        - minecraft:iron_pickaxe
+        - minecraft:golden_pickaxe
+        - minecraft:diamond_pickaxe
+        - minecraft:netherite_pickaxe
+      tags:
+        - minecraft:mineable/pickaxe
+        - farmersdelight:heat_sources
+      sounds:
+        break: minecraft:block.mud.break
+        fall: minecraft:block.mud.fall
+        hit: minecraft:block.mud.hit
+        place: minecraft:block.mud.place
+        step: minecraft:block.mud.step
+    behavior:
+      - type: farmersdelight:stove
+        crackle-sound: farmersdelight:block.stove.crackle
+        burn:
+          enabled: true
+          damage: 1.0
+    loot:
+      template: default:loot_table/self
+    states:
+      properties:
+        facing:
+          type: 4-direction
+          default: north
+        fire:
+          type: boolean
+          default: false
+      appearances:
+        east:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_off
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        east_on:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_on
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+          settings:
+            luminance: 13
+        north:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_off
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        north_on:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_on
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+          settings:
+            luminance: 13
+        south:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_off
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 0
+        south_on:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_on
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 0
+          settings:
+            luminance: 13
+        west:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_off
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        west_on:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:mud_stove_display_on
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+          settings:
+            luminance: 13
+      variants:
+        facing=east,fire=false:
+          appearance: east
+        facing=east,fire=true:
+          appearance: east_on
+        facing=north,fire=false:
+          appearance: north
+        facing=north,fire=true:
+          appearance: north_on
+        facing=south,fire=false:
+          appearance: south
+        facing=south,fire=true:
+          appearance: south_on
+        facing=west,fire=false:
+          appearance: west
+        facing=west,fire=true:
+          appearance: west_on
+
+  trailandtales_delight:pottery_cooking_pot:
+    settings:
+      hardness: 0.2
+      resistance: 6
+      push-reaction: block
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      support_shape: minecraft:decorated_pot[cracked=false,facing=north,waterlogged=false]
+      tags:
+        - minecraft:mineable/pickaxe
+      sounds:
+        break: minecraft:block.decorated_pot.break
+        fall: minecraft:block.decorated_pot.fall
+        hit: minecraft:block.decorated_pot.hit
+        place: minecraft:block.decorated_pot.place
+        step: minecraft:block.decorated_pot.step
+    behavior:
+      - type: farmersdelight:cooking_pot
+        support:
+          display: true
+          require-non-full: true
+        handle-toggle-sound:
+          sound: minecraft:block.decorated_pot.place
+          volume: 0.7
+          pitch: 1.0
+        boil:
+          sound: farmersdelight:block.cooking_pot.boil
+          soup-sound: farmersdelight:block.cooking_pot.boil_soup
+        sound:
+          chance: 0.1
+          volume: 0.5
+          pitch-min: 0.9
+          pitch-max: 1.1
+    loot:
+      template: default:loot_table/self
+    states:
+      properties:
+        facing:
+          type: 4-direction
+          default: north
+        support:
+          type: string
+          default: none
+          values:
+            - none
+            - tray
+            - handle
+      appearances:
+        east_none:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        east_tray:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_tray_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        east_handle:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_handle_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 90
+        north_none:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_display
+            scale: 1.0
+            translation: 0,0,0
+        north_tray:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_tray_display
+            scale: 1.0
+            translation: 0,0,0
+        north_handle:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_handle_display
+            scale: 1.0
+            translation: 0,0,0
+        south_none:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        south_tray:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_tray_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        south_handle:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_handle_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 180
+        west_none:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        west_tray:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_tray_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+        west_handle:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:pottery_cooking_pot_handle_display
+            scale: 1.0
+            translation: 0,0,0
+            yaw: 270
+      variants:
+        facing=east,support=none:
+          appearance: east_none
+        facing=east,support=tray:
+          appearance: east_tray
+        facing=east,support=handle:
+          appearance: east_handle
+        facing=north,support=none:
+          appearance: north_none
+        facing=north,support=tray:
+          appearance: north_tray
+        facing=north,support=handle:
+          appearance: north_handle
+        facing=south,support=none:
+          appearance: south_none
+        facing=south,support=tray:
+          appearance: south_tray
+        facing=south,support=handle:
+          appearance: south_handle
+        facing=west,support=none:
+          appearance: west_none
+        facing=west,support=tray:
+          appearance: west_tray
+        facing=west,support=handle:
+          appearance: west_handle
+
+  trailandtales_delight:lantern_fruit_crate:
+    settings:
+      hardness: 2
+      resistance: 3
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      tags:
+        - minecraft:mineable/axe
+      sounds:
+        break: minecraft:block.wood.break
+        fall: minecraft:block.wood.fall
+        hit: minecraft:block.wood.hit
+        place: minecraft:block.wood.place
+        step: minecraft:block.wood.step
+    loot:
+      template: default:loot_table/self
+    states:
+      state: barrier
+      transparent: true
+      entity_renderer:
+        type: item_display
+        item: trailandtales_delight:lantern_fruit_crate_display
+        scale: 1.0
+        translation: 0,0,0
+
+  trailandtales_delight:pitcher_taro_crate:
+    settings:
+      hardness: 2
+      resistance: 3
+      can_occlude: false
+      is_view_blocking: false
+      use_shape_for_light_occlusion: false
+      light_dampening: 0
+      tags:
+        - minecraft:mineable/axe
+      sounds:
+        break: minecraft:block.wood.break
+        fall: minecraft:block.wood.fall
+        hit: minecraft:block.wood.hit
+        place: minecraft:block.wood.place
+        step: minecraft:block.wood.step
+    loot:
+      template: default:loot_table/self
+    states:
+      state: barrier
+      transparent: true
+      entity_renderer:
+        type: item_display
+        item: trailandtales_delight:pitcher_taro_crate_display
+        scale: 1.0
+        translation: 0,0,0
+
+  trailandtales_delight:sniffer_eggshell:
+    settings:
+      hardness: 0.5
+      resistance: 0.5
+      push-reaction: destroy
+      can-occlude: false
+      is-view-blocking: false
+      light-dampening: 0
+      support_shape: minecraft:sniffer_egg[hatch=0]
+      sounds:
+        break: minecraft:block.metal.break
+        fall: minecraft:block.metal.fall
+        hit: minecraft:block.metal.hit
+        place: minecraft:block.metal.place
+        step: minecraft:block.metal.step
+    loot:
+      template: default:loot_table/self
+    states:
+      appearances:
+        shell:
+          state: barrier
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:sniffer_eggshell_display
+            scale: 1.0
+            translation: 0,0,0
+
+  trailandtales_delight:curd_block:
+    settings:
+      hardness: 0.5
+      resistance: 6
+      push-reaction: destroy
+      can-occlude: false
+      is-view-blocking: false
+      is-randomly-ticking: true
+      light-dampening: 0
+      support_shape: minecraft:air
+      sounds:
+        break: minecraft:block.honey_block.break
+        fall: minecraft:block.honey_block.fall
+        hit: minecraft:block.honey_block.hit
+        place: minecraft:block.honey_block.place
+        step: minecraft:block.honey_block.step
+    behavior:
+      - type: trailandtales_delight:curd_aging
+        mature-block: trailandtales_delight:cheese_wheel
+        max-light: 8
+        age-step: 1
+    loot:
+      template: default:loot_table/self
+    states:
+      properties:
+        age:
+          type: int
+          default: 0
+          range: 0~3
+      appearances:
+        curd:
+          state: structure_void
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:curd_block_display
+            scale: 1.0
+            translation: 0,0,0
+
+  trailandtales_delight:budding_lantern_fruit:
+    settings:
+      hardness: 0
+      push-reaction: destroy
+      can-occlude: false
+      is-view-blocking: false
+      is-randomly-ticking: true
+      light-dampening: 0
+      support_shape: minecraft:wheat[age=0]
+      tags:
+        - minecraft:crops
+        - minecraft:maintains_farmland
+        - minecraft:bee_growables
+      sounds:
+        break: minecraft:block.crop.break
+        place: minecraft:item.crop.plant
+        hit: minecraft:block.grass.hit
+        step: minecraft:block.grass.step
+    behaviors:
+      - type: liquid_flowable_block
+      - type: crop_block
+        grow-speed: 0.25
+        light-requirement: 9
+        is-bone-meal-target: true
+        bone-meal-age-bonus:
+          type: uniform
+          min: 1
+          max: 4
+      - type: bush_block
+        bottom-blocks:
+          - minecraft:farmland
+          - farmersdelight:rich_soil_farmland
+      - type: trailandtales_delight:budding_transition
+        mature-block: trailandtales_delight:lantern_fruits
+    states:
+      properties:
+        age:
+          type: int
+          default: 0
+          range: 0~4
+      appearances:
+        age_0:
+          auto_state: lower_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:budding_lantern_fruit_display_0
+            scale: 1.0
+            translation: 0,0,0
+        age_1:
+          auto_state: lower_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:budding_lantern_fruit_display_1
+            scale: 1.0
+            translation: 0,0,0
+        age_2:
+          auto_state: higher_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:budding_lantern_fruit_display_2
+            scale: 1.0
+            translation: 0,0,0
+        age_3:
+          auto_state: higher_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:budding_lantern_fruit_display_3
+            scale: 1.0
+            translation: 0,0,0
+      variants:
+        age=0:
+          appearance: age_0
+        age=1:
+          appearance: age_1
+        age=2:
+          appearance: age_2
+        age=3:
+          appearance: age_3
+        age=4:
+          appearance: age_3
+    loot:
+      pools:
+        - rolls: 1
+          conditions:
+            - type: survives_explosion
+          entries:
+            - type: item
+              item: trailandtales_delight:lantern_fruit_seeds
+              count: 1
+
+  trailandtales_delight:lantern_fruits:
+    settings:
+      hardness: 0
+      push-reaction: destroy
+      can-occlude: false
+      is-view-blocking: false
+      is-randomly-ticking: true
+      light-dampening: 0
+      support_shape: minecraft:wheat[age=0]
+      tags:
+        - minecraft:crops
+        - minecraft:maintains_farmland
+        - minecraft:bee_growables
+      sounds:
+        break: minecraft:block.crop.break
+        place: minecraft:item.crop.plant
+        hit: minecraft:block.grass.hit
+        step: minecraft:block.grass.step
+    behaviors:
+      - type: liquid_flowable_block
+      - type: crop_block
+        grow-speed: 0.25
+        light-requirement: 9
+        is-bone-meal-target: true
+        bone-meal-age-bonus:
+          type: uniform
+          min: 1
+          max: 2
+      - type: bush_block
+        bottom-blocks:
+          - minecraft:farmland
+          - farmersdelight:rich_soil_farmland
+    states:
+      properties:
+        age:
+          type: int
+          default: 0
+          range: 0~3
+      appearances:
+        age_0:
+          auto_state: lower_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:lantern_fruits_display_0
+            scale: 1.0
+            translation: 0,0,0
+        age_1:
+          auto_state: lower_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:lantern_fruits_display_1
+            scale: 1.0
+            translation: 0,0,0
+        age_2:
+          auto_state: higher_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:lantern_fruits_display_2
+            scale: 1.0
+            translation: 0,0,0
+        age_3:
+          auto_state: higher_tripwire
+          transparent: true
+          entity_renderer:
+            type: item_display
+            item: trailandtales_delight:lantern_fruits_display_3
+            scale: 1.0
+            translation: 0,0,0
+      variants:
+        age=0:
+          appearance: age_0
+        age=1:
+          appearance: age_1
+        age=2:
+          appearance: age_2
+        age=3:
+          appearance: age_3
+    events:
+      - on: right_click
+        conditions:
+          - type: test_flag
+            flag: interact
+          - type: match_block_property
+            properties:
+              age: 3
+        functions:
+          - type: drop_loot
+            x: <arg:position.block_x> + 0.5
+            y: <arg:position.block_y> + 0.5
+            z: <arg:position.block_z> + 0.5
+            loot:
+              pools:
+                - rolls: 1
+                  entries:
+                    - type: item
+                      item: trailandtales_delight:lantern_fruit
+                      functions:
+                        - type: set_count
+                          count:
+                            type: uniform
+                            min: 1
+                            max: 2
+                - rolls: 1
+                  conditions:
+                    - type: random
+                      value: 0.05
+                  entries:
+                    - type: item
+                      item: trailandtales_delight:golden_lantern_fruit
+                      count: 1
+          - type: update_block_property
+            properties:
+              age: 0
+          - type: swing_hand
+          - type: play_sound
+            sound: farmersdelight:block.tomato_bush.pick_tomatoes
+          - type: cancel_event
+    loot:
+      functions:
+        - type: explosion_decay
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: trailandtales_delight:lantern_fruit_seeds
+              count: 1
+        - rolls: 1
+          conditions:
+            - type: match_block_property
+              properties:
+                age: 3
+          entries:
+            - type: item
+              item: trailandtales_delight:lantern_fruit
+              functions:
+                - type: set_count
+                  count:
+                    type: uniform
+                    min: 1
+                    max: 2

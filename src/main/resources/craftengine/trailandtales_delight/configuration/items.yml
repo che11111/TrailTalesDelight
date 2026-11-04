@@ -1,0 +1,627 @@
+templates:
+  trailandtales_delight:food:
+    material: cooked_beef
+    model: trailandtales_delight:item/${__ID__}
+  trailandtales_delight:bowl_food:
+    material: cooked_beef
+    model: trailandtales_delight:item/${__ID__}
+    data:
+      components:
+        minecraft:max_stack_size: 16
+        minecraft:use_remainder:
+          id: minecraft:bowl
+          count: 1
+  trailandtales_delight:drink:
+    material: honey_bottle
+    model: trailandtales_delight:item/${__ID__}
+    data:
+      components:
+        minecraft:max_stack_size: 16
+        minecraft:use_remainder:
+          id: minecraft:glass_bottle
+          count: 1
+  trailandtales_delight:block_item:
+    material: nether_brick
+    model: trailandtales_delight:item/${__ID__}
+    behavior:
+      type: block_item
+      block: trailandtales_delight:${__ID__}
+  trailandtales_delight:ground_block_item:
+    material: nether_brick
+    model: trailandtales_delight:item/${__ID__}
+    behavior:
+      type: ground_block_item
+      block: trailandtales_delight:${__ID__}
+
+items:
+  trailandtales_delight:pottery_bowl:
+    material: bowl
+    model: trailandtales_delight:item/pottery_bowl
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.pottery_bowl>
+  trailandtales_delight:cherry_petal:
+    material: pink_petals
+    model: trailandtales_delight:item/cherry_petal
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_petal>
+    behavior:
+      type: compostable_item
+      chance: 0.3
+    settings:
+      compost_probability: 0.3
+  trailandtales_delight:dried_cherry_petal:
+    material: pink_petals
+    model: trailandtales_delight:item/dried_cherry_petal
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.dried_cherry_petal>
+  trailandtales_delight:baked_torchflower_seeds:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.baked_torchflower_seeds>
+      food:
+        nutrition: 1
+        saturation: 0.5
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:slow_falling
+            duration: 200
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:snacks
+  trailandtales_delight:baked_pitcher_pod:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.baked_pitcher_pod>
+      food:
+        nutrition: 1
+        saturation: 0.5
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:resistance
+            duration: 200
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:snacks
+  trailandtales_delight:pitcher_taro:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.pitcher_taro>
+      food:
+        nutrition: 3
+        saturation: 2.25
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:resistance
+            duration: 200
+            amplifier: 1
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - c:crops
+  trailandtales_delight:cooked_pitcher_taro:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cooked_pitcher_taro>
+      food:
+        nutrition: 7
+        saturation: 7
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:resistance
+            duration: 1200
+            amplifier: 1
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:snacks
+  trailandtales_delight:lantern_fruit:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.lantern_fruit>
+      food:
+        nutrition: 2
+        saturation: 1
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:fire_resistance
+            duration: 1200
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - c:foods/fruit
+        - farmersdelight:snacks
+  trailandtales_delight:golden_lantern_fruit:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><gold><lang:item.trailandtales_delight.golden_lantern_fruit></gold>
+      components:
+        minecraft:rarity: rare
+      food:
+        nutrition: 4
+        saturation: 6
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:fire_resistance
+            duration: 3600
+            amplifier: 0
+            particles: false
+          - type: potion_effect
+            potion-effect: minecraft:absorption
+            duration: 3600
+            amplifier: 0
+            particles: false
+          - type: potion_effect
+            potion-effect: minecraft:regeneration
+            duration: 100
+            amplifier: 2
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - c:foods/fruit
+        - farmersdelight:snacks
+  trailandtales_delight:lantern_fruit_seeds:
+    material: wheat_seeds
+    model: trailandtales_delight:item/lantern_fruit_seeds
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.lantern_fruit_seeds>
+    behavior:
+      type: block_item
+      block: trailandtales_delight:budding_lantern_fruit
+    settings:
+      tags:
+        - minecraft:villager_plantable_seeds
+  trailandtales_delight:fried_sniffer_egg:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.fried_sniffer_egg>
+      food:
+        nutrition: 6
+        saturation: 3.6
+        can-always-eat: false
+    settings:
+      tags:
+        - c:foods
+        - c:foods/cooked_meat
+        - farmersdelight:snacks
+  trailandtales_delight:cheese_slice:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cheese_slice>
+      food:
+        nutrition: 5
+        saturation: 2.5
+        can-always-eat: false
+    settings:
+      tags:
+        - c:foods
+        - c:foods/cheese
+        - farmersdelight:snacks
+  trailandtales_delight:cherry_cheese_slice:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_cheese_slice>
+      food:
+        nutrition: 6
+        saturation: 3
+        can-always-eat: false
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:regeneration
+            duration: 100
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - c:foods/cheese
+        - farmersdelight:sweets
+  trailandtales_delight:cherry_cake_slice:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_cake_slice>
+      food:
+        nutrition: 4
+        saturation: 4
+        can-always-eat: false
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:regeneration
+            duration: 100
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:sweets
+  trailandtales_delight:cherry_cheese_pie_slice:
+    template: trailandtales_delight:food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_cheese_pie_slice>
+      food:
+        nutrition: 3
+        saturation: 1.5
+        can-always-eat: false
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:regeneration
+            duration: 100
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:sweets
+  trailandtales_delight:stuffed_sniffer_egg:
+    template: trailandtales_delight:bowl_food
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.stuffed_sniffer_egg>
+      lore:
+        - <!i><blue><lang:effect.farmersdelight.nourishment> (05:00)</blue>
+      food:
+        nutrition: 16
+        saturation: 16
+        can-always-eat: false
+    settings:
+      tags:
+        - c:foods
+        - farmersdelight:meals
+
+  trailandtales_delight:ancient_coffee:
+    template: trailandtales_delight:drink
+    data:
+      item-name: <!i><gold><lang:item.trailandtales_delight.ancient_coffee></gold>
+      components:
+        minecraft:rarity: epic
+      food:
+        nutrition: 0
+        saturation: 0
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:resistance
+            duration: 3600
+            amplifier: 0
+            particles: false
+          - type: potion_effect
+            potion-effect: minecraft:slow_falling
+            duration: 3600
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:drinks
+        - farmersdelight:drinks
+  trailandtales_delight:torchflower_tea:
+    template: trailandtales_delight:drink
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.torchflower_tea>
+      food:
+        nutrition: 0
+        saturation: 0
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:slow_falling
+            duration: 1200
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:drinks
+        - farmersdelight:drinks
+  trailandtales_delight:cherry_petal_tea:
+    template: trailandtales_delight:drink
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_petal_tea>
+      food:
+        nutrition: 0
+        saturation: 0
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:regeneration
+            duration: 600
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:drinks
+        - farmersdelight:drinks
+  trailandtales_delight:pitcher_plant_tea:
+    template: trailandtales_delight:drink
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.pitcher_plant_tea>
+      food:
+        nutrition: 0
+        saturation: 0
+        can-always-eat: true
+    events:
+      - on: consume
+        functions:
+          - type: potion_effect
+            potion-effect: minecraft:resistance
+            duration: 1200
+            amplifier: 0
+            particles: false
+    settings:
+      tags:
+        - c:drinks
+        - farmersdelight:drinks
+
+  trailandtales_delight:cherry_iron_knife:
+    material: nether_brick
+    model: trailandtales_delight:item/cherry_iron_knife
+    data:
+      item-name: <!i><lang:item.trailandtales_delight.cherry_iron_knife>
+      max-stack-size: 1
+      components:
+        minecraft:enchantable:
+          value: 21
+        minecraft:rarity: epic
+      hide-tooltip:
+        - attribute_modifiers
+      attribute-modifiers:
+        - type: minecraft:attack_damage
+          slot: mainhand
+          amount: 2.5
+          operation: add_value
+        - type: minecraft:attack_speed
+          slot: mainhand
+          amount: -2.0
+          operation: add_value
+    settings:
+      farmersdelight:sword:
+        max-durability: 742
+        enchantability: 21
+        attack-sound: minecraft:entity.player.attack.sweep
+      tags:
+        - farmersdelight:tools/knives
+        - farmersdelight:enchantable/knife
+  trailandtales_delight:sniffer_eggshell_knife:
+    material: nether_brick
+    model: trailandtales_delight:item/sniffer_eggshell_knife
+    data:
+      item-name: <!i><gold><lang:item.trailandtales_delight.sniffer_eggshell_knife></gold>
+      max-stack-size: 1
+      components:
+        minecraft:enchantable:
+          value: 26
+        minecraft:rarity: epic
+      hide-tooltip:
+        - attribute_modifiers
+      attribute-modifiers:
+        - type: minecraft:attack_damage
+          slot: mainhand
+          amount: 4.5
+          operation: add_value
+        - type: minecraft:attack_speed
+          slot: mainhand
+          amount: -2.0
+          operation: add_value
+    settings:
+      farmersdelight:sword:
+        max-durability: 197
+        enchantability: 26
+        attack-sound: minecraft:entity.player.attack.sweep
+      tags:
+        - farmersdelight:tools/knives
+        - farmersdelight:enchantable/knife
+
+  trailandtales_delight:mud_stove:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.mud_stove>
+      components:
+        minecraft:max_stack_size: 1
+  trailandtales_delight:pottery_cooking_pot:
+    template: trailandtales_delight:ground_block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.pottery_cooking_pot>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable_sneaking></dark_gray>
+      components:
+        minecraft:max_stack_size: 1
+  trailandtales_delight:lantern_fruit_crate:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.lantern_fruit_crate>
+  trailandtales_delight:pitcher_taro_crate:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.pitcher_taro_crate>
+  trailandtales_delight:curd_block:
+    template: trailandtales_delight:ground_block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.curd_block>
+      lore:
+        - <!i><gray><lang:block.trailandtales_delight.curd_block.tooltip></gray>
+  trailandtales_delight:cherry_cake:
+    template: trailandtales_delight:ground_block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.cherry_cake>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable></dark_gray>
+      components:
+        minecraft:max_stack_size: 1
+  trailandtales_delight:cherry_cheese_pie:
+    template: trailandtales_delight:ground_block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.cherry_cheese_pie>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable></dark_gray>
+  trailandtales_delight:cheese_wheel:
+    template: trailandtales_delight:ground_block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.cheese_wheel>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable></dark_gray>
+  trailandtales_delight:sniffer_eggshell:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.sniffer_eggshell>
+  trailandtales_delight:cooked_sniffer_egg_block:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.cooked_sniffer_egg_block>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable></dark_gray>
+      components:
+        minecraft:max_stack_size: 1
+  trailandtales_delight:stuffed_sniffer_egg_block:
+    template: trailandtales_delight:block_item
+    data:
+      item-name: <!i><lang:block.trailandtales_delight.stuffed_sniffer_egg_block>
+      lore:
+        - <!i><dark_gray><lang:farmersdelight.tooltip.placeable></dark_gray>
+      components:
+        minecraft:max_stack_size: 1
+
+  # 可切片食物方块状态使用的内部物品展示模型。
+  # Internal item-display models for sliceable food block states.
+  trailandtales_delight:cherry_cake_display_0:
+    material: paper
+    model: trailandtales_delight:block/cherry_cake
+  trailandtales_delight:cherry_cake_display_1:
+    material: paper
+    model: trailandtales_delight:block/cherry_cake_slice1
+  trailandtales_delight:cherry_cake_display_2:
+    material: paper
+    model: trailandtales_delight:block/cherry_cake_slice2
+  trailandtales_delight:cherry_cake_display_3:
+    material: paper
+    model: trailandtales_delight:block/cherry_cake_slice3
+  trailandtales_delight:cherry_cheese_pie_display_0:
+    material: paper
+    model: trailandtales_delight:block/cherry_cheese_pie
+  trailandtales_delight:cherry_cheese_pie_display_1:
+    material: paper
+    model: trailandtales_delight:block/cherry_cheese_pie_slice1
+  trailandtales_delight:cherry_cheese_pie_display_2:
+    material: paper
+    model: trailandtales_delight:block/cherry_cheese_pie_slice2
+  trailandtales_delight:cherry_cheese_pie_display_3:
+    material: paper
+    model: trailandtales_delight:block/cherry_cheese_pie_slice3
+  trailandtales_delight:cheese_wheel_display_0:
+    material: paper
+    model: trailandtales_delight:block/cheese_wheel
+  trailandtales_delight:cheese_wheel_display_1:
+    material: paper
+    model: trailandtales_delight:block/cheese_wheel_slice1
+  trailandtales_delight:cheese_wheel_display_2:
+    material: paper
+    model: trailandtales_delight:block/cheese_wheel_slice2
+  trailandtales_delight:cheese_wheel_display_3:
+    material: paper
+    model: trailandtales_delight:block/cheese_wheel_slice3
+
+  trailandtales_delight:stuffed_sniffer_egg_block_display_4:
+    material: paper
+    model: trailandtales_delight:block/stuffed_sniffer_egg_block_stage0
+  trailandtales_delight:stuffed_sniffer_egg_block_display_3:
+    material: paper
+    model: trailandtales_delight:block/stuffed_sniffer_egg_block_stage1
+  trailandtales_delight:stuffed_sniffer_egg_block_display_2:
+    material: paper
+    model: trailandtales_delight:block/stuffed_sniffer_egg_block_stage2
+  trailandtales_delight:stuffed_sniffer_egg_block_display_1:
+    material: paper
+    model: trailandtales_delight:block/stuffed_sniffer_egg_block_stage3
+
+  trailandtales_delight:pottery_cooking_pot_display:
+    material: paper
+    model: trailandtales_delight:block/pottery_cooking_pot
+  trailandtales_delight:pottery_cooking_pot_tray_display:
+    material: paper
+    model: trailandtales_delight:block/pottery_cooking_pot_tray
+  trailandtales_delight:pottery_cooking_pot_handle_display:
+    material: paper
+    model: trailandtales_delight:block/pottery_cooking_pot_handle
+  trailandtales_delight:cooked_sniffer_egg_block_display:
+    material: paper
+    model: trailandtales_delight:block/cooked_sniffer_egg_block
+
+  trailandtales_delight:mud_stove_display_off:
+    material: paper
+    model: trailandtales_delight:block/mud_stove
+  trailandtales_delight:mud_stove_display_on:
+    material: paper
+    model: trailandtales_delight:block/mud_stove_on
+  trailandtales_delight:lantern_fruit_crate_display:
+    material: paper
+    model: trailandtales_delight:block/lantern_fruit_crate
+  trailandtales_delight:pitcher_taro_crate_display:
+    material: paper
+    model: trailandtales_delight:block/pitcher_taro_crate
+  trailandtales_delight:sniffer_eggshell_display:
+    material: paper
+    model: trailandtales_delight:block/sniffer_eggshell
+  trailandtales_delight:curd_block_display:
+    material: paper
+    model: trailandtales_delight:block/curd_block
+
+  trailandtales_delight:budding_lantern_fruit_display_0:
+    material: paper
+    model: trailandtales_delight:block/budding_lantern_fruits_stage0
+  trailandtales_delight:budding_lantern_fruit_display_1:
+    material: paper
+    model: trailandtales_delight:block/budding_lantern_fruits_stage1
+  trailandtales_delight:budding_lantern_fruit_display_2:
+    material: paper
+    model: trailandtales_delight:block/budding_lantern_fruits_stage2
+  trailandtales_delight:budding_lantern_fruit_display_3:
+    material: paper
+    model: trailandtales_delight:block/budding_lantern_fruits_stage3
+  trailandtales_delight:lantern_fruits_display_0:
+    material: paper
+    model: trailandtales_delight:block/lantern_fruits_stage0
+  trailandtales_delight:lantern_fruits_display_1:
+    material: paper
+    model: trailandtales_delight:block/lantern_fruits_stage1
+  trailandtales_delight:lantern_fruits_display_2:
+    material: paper
+    model: trailandtales_delight:block/lantern_fruits_stage2
+  trailandtales_delight:lantern_fruits_display_3:
+    material: paper
+    model: trailandtales_delight:block/lantern_fruits_stage3
