@@ -4,8 +4,7 @@ main: dev.che1s.trailtalesdelight.TrailTalesDelightPlugin
 api-version: '1.21.5'
 folia-supported: true
 description: CraftEngine port of Trail & Tales Delight for FarmersDelight.
-authors:
-  - che1s
+authors: che1s
 dependencies:
   server:
     CraftEngine:
