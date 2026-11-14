@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: '利用可能な FarmersDelight が見つからないため、TrailTalesDelight を無効化しました。'
+  enabled_summary: 'TrailTalesDelight を読み込みました：{items} 個のアイテム、{blocks} 個のカスタムブロック、{recipes} 個の調理台レシピ。'
+  disabled: 'TrailTalesDelight を停止しました。'
+  reloaded_with_reason: 'TrailTalesDelight を再読み込みしました：{reason}'
+  unsafe-reload: '/reload で TrailTalesDelight を再読み込みしないでください。サーバーを再起動してください。'
+  recipes-unsupported: 'この FarmersDelight はアドオンのレシピブックに対応していないため、TrailTalesDelight を無効化しました。'
+  config_update_failed: 'config.yml を更新できませんでした：{error}'
+  gui_missing: '同梱の gui.yml が見つかりません。組み込みのレシピ画面を使用します。'
+  gui_load_failed: 'gui.yml を読み込めませんでした：{error}'
+  resources_installed: '{namespace} {version} の CraftEngine リソースを {count} 個書き込み、古いファイルを {removed} 個削除しました。'
+  resources_install_failed: 'CraftEngine リソースをインストールできませんでした：{error}'
+recipe:
+  station:
+    cooking_pot: '調理鍋'
+    cutting_board: 'まな板'
+  cook_time: '調理時間：{seconds} 秒'
+language:
+  invalid_code: 'サーバーロケール {server} から言語設定「{code}」を判定できないため、en_us を使用します。'
+  load_failed: '言語「{code}」を読み込めないため、en_us を使用します。'
+  missing_bundled: '同梱の言語ファイルがありません：{code}'
+  save_failed: '言語ファイル「{file}」を準備できませんでした：{error}'
+curd:
+  cannot_cut: '凝乳ブロックはまだ熟成していないため切断できません'
+slice:
+  unavailable: 'スライスアイテムを読み込めませんでした。サーバーを再起動してください'
+  food_full: '満腹のため、これ以上食べられません。'
+feast:
+  bowl_required: '料理を取るにはボウルを手に持ってください。'
+  unavailable: '配膳アイテムを読み込めませんでした。サーバーを再起動してください。'
+  empty: 'ここにはもう料理がありません。'
+interaction:
+  unavailable: '料理ブロックのデータが利用できません。サーバーを再起動してください。'

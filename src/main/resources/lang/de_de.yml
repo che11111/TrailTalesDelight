@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: 'FarmersDelight ist nicht verfügbar; TrailTalesDelight wurde deaktiviert.'
+  enabled_summary: 'TrailTalesDelight geladen: {items} Gegenstände, {blocks} eigene Blöcke und {recipes} Stationsrezepte.'
+  disabled: 'TrailTalesDelight wurde deaktiviert.'
+  reloaded_with_reason: 'TrailTalesDelight neu geladen: {reason}'
+  unsafe-reload: 'TrailTalesDelight darf nicht mit /reload neu geladen werden. Starte den Server neu.'
+  recipes-unsupported: 'Diese FarmersDelight-Version unterstützt keine Add-on-Rezeptbücher; TrailTalesDelight wurde deaktiviert.'
+  config_update_failed: 'config.yml konnte nicht aktualisiert werden: {error}'
+  gui_missing: 'Die mitgelieferte gui.yml fehlt; die integrierten Rezeptansichten werden verwendet.'
+  gui_load_failed: 'gui.yml konnte nicht geladen werden: {error}'
+  resources_installed: '{count} CraftEngine-Ressourcen für {namespace} {version} geschrieben und {removed} veraltete Dateien entfernt.'
+  resources_install_failed: 'CraftEngine-Ressourcen konnten nicht installiert werden: {error}'
+recipe:
+  station:
+    cooking_pot: 'Kochtopf'
+    cutting_board: 'Schneidebrett'
+  cook_time: 'Kochzeit: {seconds} Sekunden'
+language:
+  invalid_code: 'Sprache "{code}" konnte aus der Server-Locale {server} nicht ermittelt werden; en_us wird verwendet.'
+  load_failed: 'Sprache "{code}" konnte nicht geladen werden; en_us wird verwendet.'
+  missing_bundled: 'Mitgelieferte Sprachdatei fehlt: {code}'
+  save_failed: 'Sprachdatei "{file}" konnte nicht vorbereitet werden: {error}'
+curd:
+  cannot_cut: 'Der Quarkblock ist noch nicht gereift und kann nicht geschnitten werden'
+slice:
+  unavailable: 'Das Scheiben-Item konnte nicht geladen werden; starte den Server neu'
+  food_full: 'Du bist zu satt, um noch etwas zu essen.'
+feast:
+  bowl_required: 'Halte eine Schüssel, um eine Portion zu entnehmen.'
+  unavailable: 'Das Portions-Item konnte nicht geladen werden; starte den Server neu.'
+  empty: 'Hier ist kein Essen mehr übrig.'
+interaction:
+  unavailable: 'Die Daten des Essensblocks sind nicht verfügbar; starte den Server neu.'

@@ -123,11 +123,16 @@ All custom blocks use `item_display` entities for visual rendering.
 
 ## Language
 
-Simplified Chinese is the default server language, and English is bundled. Item, block, advancement, and tooltip names shown to players follow the client language. Resource-pack translations are located under `plugins/CraftEngine/resources/trailandtales_delight/resourcepack/assets/trailandtales_delight/lang/`.
+Global messages use `auto` by default. The plugin resolves the server JVM/system locale to English, Simplified Chinese, Japanese, Korean, Traditional Chinese, German, French, Spanish, or Russian, and falls back to English when the locale is unsupported.
+
+Item, block, advancement, recipe-page, and tooltip names continue to follow each player's client language. Global server messages can be edited in `plugins/TrailTalesDelight/lang/<language>.yml`.
 
 ```yaml
 # plugins/TrailTalesDelight/config.yml
-language: zh_cn # zh_cn or en_us
+language: auto
+# Explicit options:
+# en_us.yml, zh_cn.yml, ja_jp.yml, ko_kr.yml, zh_tw.yml,
+# de_de.yml, fr_fr.yml, es_es.yml, ru_ru.yml
 ```
 
 ## Sponsorship and Support

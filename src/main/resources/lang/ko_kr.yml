@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: '사용 가능한 FarmersDelight를 찾을 수 없어 TrailTalesDelight를 비활성화했습니다.'
+  enabled_summary: 'TrailTalesDelight 로드 완료: 아이템 {items}개, 사용자 지정 블록 {blocks}개, 조리대 레시피 {recipes}개.'
+  disabled: 'TrailTalesDelight가 비활성화되었습니다.'
+  reloaded_with_reason: 'TrailTalesDelight 다시 로드 완료: {reason}'
+  unsafe-reload: '/reload로 TrailTalesDelight를 다시 로드하지 마세요. 서버를 재시작하세요.'
+  recipes-unsupported: '이 FarmersDelight 버전은 애드온 레시피북을 지원하지 않아 TrailTalesDelight를 비활성화했습니다.'
+  config_update_failed: 'config.yml을 업데이트할 수 없습니다: {error}'
+  gui_missing: '내장 gui.yml이 없어 내장 레시피 화면을 사용합니다.'
+  gui_load_failed: 'gui.yml을 불러올 수 없습니다: {error}'
+  resources_installed: '{namespace} {version}의 CraftEngine 리소스 {count}개를 기록하고 오래된 파일 {removed}개를 정리했습니다.'
+  resources_install_failed: 'CraftEngine 리소스를 설치할 수 없습니다: {error}'
+recipe:
+  station:
+    cooking_pot: '요리 냄비'
+    cutting_board: '도마'
+  cook_time: '조리 시간: {seconds}초'
+language:
+  invalid_code: '서버 로캘 {server}에서 언어 설정 "{code}"을(를) 확인할 수 없어 en_us를 사용합니다.'
+  load_failed: '언어 "{code}"을(를) 불러올 수 없어 en_us를 사용합니다.'
+  missing_bundled: '내장 언어 파일이 없습니다: {code}'
+  save_failed: '언어 파일 "{file}"을(를) 준비할 수 없습니다: {error}'
+curd:
+  cannot_cut: '커드 블록이 아직 숙성되지 않아 자를 수 없습니다'
+slice:
+  unavailable: '조각 아이템을 불러오지 못했습니다. 서버를 재시작하세요'
+  food_full: '배가 불러 더 이상 먹을 수 없습니다.'
+feast:
+  bowl_required: '음식을 덜려면 그릇을 들고 있어야 합니다.'
+  unavailable: '제공 아이템을 불러오지 못했습니다. 서버를 재시작하세요.'
+  empty: '여기에는 남은 음식이 없습니다.'
+interaction:
+  unavailable: '음식 블록 데이터를 사용할 수 없습니다. 서버를 재시작하세요.'

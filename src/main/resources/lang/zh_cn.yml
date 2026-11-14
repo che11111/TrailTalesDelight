@@ -16,8 +16,8 @@ recipe:
     cutting_board: '砧板'
   cook_time: '烹饪时间：{seconds} 秒'
 language:
-  invalid_code: '语言代码“{code}”无效，已改用 zh_cn。'
-  load_failed: '无法加载语言“{code}”，已改用 zh_cn。'
+  invalid_code: '无法从服务器语言“{server}”识别配置“{code}”，已改用 en_us。'
+  load_failed: '无法加载语言“{code}”，已改用 en_us。'
   missing_bundled: '插件内置语言文件缺失：{code}'
   save_failed: '无法准备语言文件“{file}”：{error}'
 curd:

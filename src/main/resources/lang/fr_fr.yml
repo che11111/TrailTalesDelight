@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: 'FarmersDelight est indisponible ; TrailTalesDelight a été désactivé.'
+  enabled_summary: 'TrailTalesDelight chargé : {items} objets, {blocks} blocs personnalisés et {recipes} recettes de station.'
+  disabled: 'TrailTalesDelight a été désactivé.'
+  reloaded_with_reason: 'TrailTalesDelight rechargé : {reason}'
+  unsafe-reload: 'N’utilisez pas /reload pour TrailTalesDelight. Redémarrez le serveur.'
+  recipes-unsupported: 'Cette version de FarmersDelight ne prend pas en charge les livres de recettes d’extension ; TrailTalesDelight a été désactivé.'
+  config_update_failed: 'Impossible de mettre à jour config.yml : {error}'
+  gui_missing: 'Le fichier gui.yml fourni est absent ; les écrans de recettes intégrés seront utilisés.'
+  gui_load_failed: 'Impossible de charger gui.yml : {error}'
+  resources_installed: '{count} ressources CraftEngine écrites pour {namespace} {version} et {removed} anciens fichiers supprimés.'
+  resources_install_failed: 'Impossible d’installer les ressources CraftEngine : {error}'
+recipe:
+  station:
+    cooking_pot: 'Marmite'
+    cutting_board: 'Planche à découper'
+  cook_time: 'Temps de cuisson : {seconds} secondes'
+language:
+  invalid_code: 'La langue « {code} » n’a pas pu être déterminée depuis la locale du serveur {server} ; en_us sera utilisé.'
+  load_failed: 'Impossible de charger la langue « {code} » ; en_us sera utilisé.'
+  missing_bundled: 'Fichier de langue fourni manquant : {code}'
+  save_failed: 'Impossible de préparer le fichier de langue « {file} » : {error}'
+curd:
+  cannot_cut: 'Le bloc de caillé n’est pas encore affiné et ne peut pas être coupé'
+slice:
+  unavailable: 'Impossible de charger l’objet tranché ; redémarrez le serveur'
+  food_full: 'Vous n’avez plus assez faim pour manger ceci.'
+feast:
+  bowl_required: 'Tenez un bol pour prendre une portion.'
+  unavailable: 'Impossible de charger la portion ; redémarrez le serveur.'
+  empty: 'Il ne reste plus de nourriture ici.'
+interaction:
+  unavailable: 'Les données du bloc de nourriture sont indisponibles ; redémarrez le serveur.'

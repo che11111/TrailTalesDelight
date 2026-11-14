@@ -1,8 +1,12 @@
 config-version: 3
 
-# 可用语言：zh_cn（默认）、en_us、auto，或 lang/<code>.yml 中的任意语言代码。
-# Available languages: zh_cn (default), en_us, auto, or any language code in lang/<code>.yml.
-language: zh_cn
+# 可用语言：auto、en_us.yml、zh_cn.yml、ja_jp.yml、ko_kr.yml、zh_tw.yml、
+# de_de.yml、fr_fr.yml、es_es.yml、ru_ru.yml。
+# auto 使用服务端 JVM/系统语言；无法识别时回退到 en_us。
+# Available: auto, en_us.yml, zh_cn.yml, ja_jp.yml, ko_kr.yml, zh_tw.yml,
+# de_de.yml, fr_fr.yml, es_es.yml, or ru_ru.yml.
+# auto uses the server JVM/system locale and falls back to en_us when unsupported.
+language: auto
 
 craftengine-resources:
   # 启动时补回本附属命名空间中缺失的资源文件。

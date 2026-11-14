@@ -16,8 +16,8 @@ recipe:
     cutting_board: 'Cutting Board'
   cook_time: 'Cooking time: {seconds} seconds'
 language:
-  invalid_code: 'Invalid language code "{code}"; using zh_cn.'
-  load_failed: 'Could not load language "{code}"; using zh_cn.'
+  invalid_code: 'Could not resolve language "{code}" from server locale {server}; using en_us.'
+  load_failed: 'Could not load language "{code}"; using en_us.'
   missing_bundled: 'Bundled language file is missing: {code}'
   save_failed: 'Could not prepare language file "{file}": {error}'
 curd:

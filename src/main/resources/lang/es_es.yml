@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: 'FarmersDelight no está disponible; TrailTalesDelight se ha desactivado.'
+  enabled_summary: 'TrailTalesDelight cargado: {items} objetos, {blocks} bloques personalizados y {recipes} recetas de estación.'
+  disabled: 'TrailTalesDelight se ha desactivado.'
+  reloaded_with_reason: 'TrailTalesDelight recargado: {reason}'
+  unsafe-reload: 'No uses /reload con TrailTalesDelight. Reinicia el servidor.'
+  recipes-unsupported: 'Esta versión de FarmersDelight no admite libros de recetas de complementos; TrailTalesDelight se ha desactivado.'
+  config_update_failed: 'No se pudo actualizar config.yml: {error}'
+  gui_missing: 'Falta el archivo gui.yml incluido; se usarán las pantallas de recetas integradas.'
+  gui_load_failed: 'No se pudo cargar gui.yml: {error}'
+  resources_installed: 'Se escribieron {count} recursos de CraftEngine para {namespace} {version} y se eliminaron {removed} archivos obsoletos.'
+  resources_install_failed: 'No se pudieron instalar los recursos de CraftEngine: {error}'
+recipe:
+  station:
+    cooking_pot: 'Olla de cocina'
+    cutting_board: 'Tabla de cortar'
+  cook_time: 'Tiempo de cocción: {seconds} segundos'
+language:
+  invalid_code: 'No se pudo determinar el idioma "{code}" desde la configuración regional del servidor {server}; se usará en_us.'
+  load_failed: 'No se pudo cargar el idioma "{code}"; se usará en_us.'
+  missing_bundled: 'Falta el archivo de idioma incluido: {code}'
+  save_failed: 'No se pudo preparar el archivo de idioma "{file}": {error}'
+curd:
+  cannot_cut: 'El bloque de cuajada aún no ha madurado y no se puede cortar'
+slice:
+  unavailable: 'No se pudo cargar el objeto en rodajas; reinicia el servidor'
+  food_full: 'No tienes suficiente hambre para comer esto.'
+feast:
+  bowl_required: 'Sujeta un cuenco para tomar una ración.'
+  unavailable: 'No se pudo cargar la ración; reinicia el servidor.'
+  empty: 'Ya no queda comida aquí.'
+interaction:
+  unavailable: 'Los datos del bloque de comida no están disponibles; reinicia el servidor.'

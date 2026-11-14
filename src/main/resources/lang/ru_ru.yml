@@ -1,0 +1,33 @@
+plugin:
+  farmersdelight-unavailable: 'FarmersDelight недоступен; TrailTalesDelight отключён.'
+  enabled_summary: 'TrailTalesDelight загружен: предметов — {items}, пользовательских блоков — {blocks}, рецептов станций — {recipes}.'
+  disabled: 'TrailTalesDelight отключён.'
+  reloaded_with_reason: 'TrailTalesDelight перезагружен: {reason}'
+  unsafe-reload: 'Не используйте /reload для TrailTalesDelight. Перезапустите сервер.'
+  recipes-unsupported: 'Эта версия FarmersDelight не поддерживает книги рецептов дополнений; TrailTalesDelight отключён.'
+  config_update_failed: 'Не удалось обновить config.yml: {error}'
+  gui_missing: 'Встроенный gui.yml отсутствует; будут использованы встроенные экраны рецептов.'
+  gui_load_failed: 'Не удалось загрузить gui.yml: {error}'
+  resources_installed: 'Записано ресурсов CraftEngine для {namespace} {version}: {count}; удалено устаревших файлов: {removed}.'
+  resources_install_failed: 'Не удалось установить ресурсы CraftEngine: {error}'
+recipe:
+  station:
+    cooking_pot: 'Котёл для готовки'
+    cutting_board: 'Разделочная доска'
+  cook_time: 'Время готовки: {seconds} с'
+language:
+  invalid_code: 'Не удалось определить язык "{code}" по языковому стандарту сервера {server}; используется en_us.'
+  load_failed: 'Не удалось загрузить язык "{code}"; используется en_us.'
+  missing_bundled: 'Встроенный языковой файл отсутствует: {code}'
+  save_failed: 'Не удалось подготовить языковой файл "{file}": {error}'
+curd:
+  cannot_cut: 'Творожный блок ещё не созрел, его нельзя разрезать'
+slice:
+  unavailable: 'Не удалось загрузить нарезанный предмет; перезапустите сервер'
+  food_full: 'Вы слишком сыты, чтобы это съесть.'
+feast:
+  bowl_required: 'Возьмите миску, чтобы получить порцию.'
+  unavailable: 'Не удалось загрузить порцию; перезапустите сервер.'
+  empty: 'Здесь больше не осталось еды.'
+interaction:
+  unavailable: 'Данные блока еды недоступны; перезапустите сервер.'

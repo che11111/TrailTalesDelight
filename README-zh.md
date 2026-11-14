@@ -123,11 +123,16 @@
 
 ## 语言
 
-插件默认使用简体中文，同时内置英文。玩家看到的物品、方块、进度和提示名称跟随客户端语言，在 `plugins/CraftEngine/resources/trailandtales_delight/resourcepack/assets/trailandtales_delight/lang/` 中修改。
+全局消息语言默认使用 `auto`。插件根据服务端 JVM/系统 Locale 自动选择英语、简体中文、日语、韩语、繁体中文、德语、法语、西班牙语或俄语；无法识别时回退到英语。
+
+物品、方块、进度、配方页面和提示名称仍跟随玩家客户端语言。服务端全局消息可通过 `plugins/TrailTalesDelight/lang/<语言>.yml` 修改。
 
 ```yaml
 # plugins/TrailTalesDelight/config.yml
-language: zh_cn # zh_cn 或 en_us
+language: auto
+# 也可显式填写：
+# en_us.yml、zh_cn.yml、ja_jp.yml、ko_kr.yml、zh_tw.yml、
+# de_de.yml、fr_fr.yml、es_es.yml、ru_ru.yml
 ```
 
 ## 赞助与支持

@@ -13,14 +13,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.regex.Pattern;
 
 public final class AddonLang {
-    private static final String DEFAULT_LANGUAGE = "zh_cn";
-    private static final Pattern LANGUAGE_CODE = Pattern.compile("[a-z0-9_.-]+");
     private static final Map<String, String> MESSAGES = new ConcurrentHashMap<>();
+    private static final Map<String, String> FALLBACK_MESSAGES = new ConcurrentHashMap<>();
     private static JavaPlugin plugin;
-    private static String loadedLanguage = DEFAULT_LANGUAGE;
+    private static String loadedLanguage = LanguageResolver.FALLBACK;
 
     private AddonLang() {
     }
@@ -32,30 +30,28 @@ public final class AddonLang {
 
     public static void reload() {
         MESSAGES.clear();
+        FALLBACK_MESSAGES.clear();
         List<Message> diagnostics = new ArrayList<>();
-        String configured = plugin.getConfig().getString("language", DEFAULT_LANGUAGE);
-        String locale = configured == null || configured.isBlank()
-                ? DEFAULT_LANGUAGE
-                : configured.trim().toLowerCase(Locale.ROOT).replace('-', '_');
-        if ("auto".equals(locale)) {
-            locale = Locale.getDefault().toString().toLowerCase(Locale.ROOT).replace('-', '_');
-        }
-        if (!LANGUAGE_CODE.matcher(locale).matches()) {
+        String configured = plugin.getConfig().getString("language", LanguageResolver.AUTO);
+        LanguageResolver.Selection selection =
+                LanguageResolver.select(configured, Locale.getDefault());
+        String locale = selection.language();
+        if (selection.fallback()) {
             diagnostics.add(new Message("language.invalid_code",
-                    "Invalid language code '{code}', using zh_cn.",
-                    "code", locale));
-            locale = DEFAULT_LANGUAGE;
+                    "Could not resolve language '{code}' from server locale {server}; using en_us.",
+                    "code", configured == null ? "auto" : configured,
+                    "server", String.valueOf(selection.systemLocale())));
         }
 
-        ensureExternalLanguage(DEFAULT_LANGUAGE, false, diagnostics);
-        ensureExternalLanguage("en_us", false, diagnostics);
-        ensureExternalLanguage(locale, true, diagnostics);
+        for (String languageCode : LanguageResolver.SUPPORTED) {
+            ensureExternalLanguage(languageCode, diagnostics);
+        }
+        loadLanguage(LanguageResolver.FALLBACK, FALLBACK_MESSAGES);
         if (!loadLanguage(locale)) {
             diagnostics.add(new Message("language.load_failed",
-                    "Could not load language '{code}', using zh_cn.",
+                    "Could not load language '{code}', using en_us.",
                     "code", locale));
-            loadLanguage(DEFAULT_LANGUAGE);
-            locale = DEFAULT_LANGUAGE;
+            locale = LanguageResolver.FALLBACK;
         }
         loadedLanguage = locale;
         for (Message diagnostic : diagnostics) {
@@ -68,6 +64,10 @@ public final class AddonLang {
     }
 
     private static boolean loadLanguage(String languageCode) {
+        return loadLanguage(languageCode, MESSAGES);
+    }
+
+    private static boolean loadLanguage(String languageCode, Map<String, String> messages) {
         Path external = plugin.getDataFolder().toPath()
                 .resolve("lang")
                 .resolve(languageCode + ".yml");
@@ -87,7 +87,7 @@ public final class AddonLang {
                 YamlConfiguration yaml = YamlConfiguration.loadConfiguration(reader);
                 for (String key : yaml.getKeys(true)) {
                     if (yaml.isString(key)) {
-                        MESSAGES.put(key, yaml.getString(key));
+                        messages.put(key, yaml.getString(key));
                     }
                 }
             }
@@ -97,15 +97,11 @@ public final class AddonLang {
         }
     }
 
-    private static void ensureExternalLanguage(String languageCode, boolean seedFromDefault,
-                                               List<Message> diagnostics) {
+    private static void ensureExternalLanguage(String languageCode, List<Message> diagnostics) {
         Path target = plugin.getDataFolder().toPath()
                 .resolve("lang")
                 .resolve(languageCode + ".yml");
         YamlConfiguration packaged = loadPackaged(languageCode);
-        if (packaged == null && seedFromDefault) {
-            packaged = loadPackaged(DEFAULT_LANGUAGE);
-        }
         if (packaged == null) {
             diagnostics.add(new Message("language.missing_bundled",
                     "Bundled language file is missing: {code}",
@@ -150,7 +146,10 @@ public final class AddonLang {
     }
 
     public static String get(String key, String fallback, Object... values) {
-        String message = MESSAGES.getOrDefault(key, fallback);
+        String message = MESSAGES.getOrDefault(
+                key,
+                FALLBACK_MESSAGES.getOrDefault(key, fallback)
+        );
         if (values != null) {
             for (int i = 0; i + 1 < values.length; i += 2) {
                 message = message.replace("{" + values[i] + "}", String.valueOf(values[i + 1]));
