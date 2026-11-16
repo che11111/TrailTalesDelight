@@ -46,7 +46,6 @@ public final class TrailContentListener implements Listener {
 
     private final TrailTalesDelightPlugin plugin;
     private final Set<String> registeredComfort = new HashSet<>();
-    private final Set<String> registeredNourishment = new HashSet<>();
     private final InteractionDeduplicator interactionDeduplicator = new InteractionDeduplicator();
 
     public TrailContentListener(TrailTalesDelightPlugin plugin) {
@@ -178,8 +177,7 @@ public final class TrailContentListener implements Listener {
             return;
         }
         unregisterFoodEffects();
-        registerFoodEffects("comfort", true);
-        registerFoodEffects("nourishment", false);
+        registerComfortFoods();
     }
 
     public void unregisterFoodEffects() {
@@ -189,15 +187,11 @@ public final class TrailContentListener implements Listener {
         for (String id : registeredComfort) {
             FarmersDelightFoodEffects.unregisterComfortFood(id);
         }
-        for (String id : registeredNourishment) {
-            FarmersDelightFoodEffects.unregisterNourishmentFood(id);
-        }
         registeredComfort.clear();
-        registeredNourishment.clear();
     }
 
-    private void registerFoodEffects(String sectionName, boolean comfort) {
-        var section = plugin.getConfig().getConfigurationSection("food-effects." + sectionName);
+    private void registerComfortFoods() {
+        var section = plugin.getConfig().getConfigurationSection("food-effects.comfort");
         if (section == null) {
             return;
         }
@@ -207,13 +201,8 @@ public final class TrailContentListener implements Listener {
             if (id == null || duration <= 0) {
                 continue;
             }
-            if (comfort) {
-                FarmersDelightFoodEffects.registerComfortFood(id, duration);
-                registeredComfort.add(id);
-            } else {
-                FarmersDelightFoodEffects.registerNourishmentFood(id, duration);
-                registeredNourishment.add(id);
-            }
+            FarmersDelightFoodEffects.registerComfortFood(id, duration);
+            registeredComfort.add(id);
         }
     }
 

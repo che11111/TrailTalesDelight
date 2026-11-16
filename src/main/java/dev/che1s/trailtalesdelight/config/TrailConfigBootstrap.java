@@ -11,7 +11,8 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public final class TrailConfigBootstrap {
     private static final ConfigUpdatePolicy POLICY = ConfigUpdatePolicy.builder()
-            .registrySection("food-effects.comfort", "food-effects.nourishment")
+            .registrySection("food-effects.comfort")
+            .retire("food-effects.nourishment")
             .build();
 
     private final JavaPlugin plugin;

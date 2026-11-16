@@ -19,7 +19,6 @@ blocks:
         - minecraft:netherite_pickaxe
       tags:
         - minecraft:mineable/pickaxe
-        - farmersdelight:heat_sources
       sounds:
         break: minecraft:block.mud.break
         fall: minecraft:block.mud.fall
@@ -435,7 +434,7 @@ blocks:
           range: 0~3
       appearances:
         curd:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display

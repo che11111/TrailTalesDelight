@@ -287,7 +287,9 @@ items:
         - c:foods
         - farmersdelight:sweets
   trailandtales_delight:stuffed_sniffer_egg:
-    template: trailandtales_delight:bowl_food
+    template:
+      - trailandtales_delight:bowl_food
+      - farmersdelight:nourishment_300_template
     data:
       item-name: <!i><lang:item.trailandtales_delight.stuffed_sniffer_egg>
       lore:

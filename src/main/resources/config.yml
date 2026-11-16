@@ -1,4 +1,4 @@
-config-version: 3
+config-version: 4
 
 # 可用语言：auto、en_us.yml、zh_cn.yml、ja_jp.yml、ko_kr.yml、zh_tw.yml、
 # de_de.yml、fr_fr.yml、es_es.yml、ru_ru.yml。
@@ -30,10 +30,6 @@ food-effects:
       duration: 180
     - id: trailandtales_delight:cherry_petal_tea
       duration: 180
-  nourishment:
-    - id: trailandtales_delight:stuffed_sniffer_egg
-      duration: 300
-
 # 在不替换原版战利品表的前提下追加小型战利品整合。
 # Adds the mod's small vanilla-loot integrations without replacing the base tables.
 vanilla-loot:

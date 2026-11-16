@@ -1,6 +1,7 @@
 package dev.che1s.trailtalesdelight;
 
 import com.huidu.farmersdelight.api.FarmersDelightApi;
+import com.huidu.farmersdelight.api.block.HeatSources;
 import com.huidu.farmersdelight.api.registry.ContentRegistration;
 import com.huidu.farmersdelight.api.util.PluginManagerGuard;
 import dev.che1s.trailtalesdelight.block.BuddingTransitionBehavior;
@@ -29,6 +30,7 @@ public final class TrailTalesDelightPlugin extends JavaPlugin {
     private TrailRecipeType recipeType;
     private YamlConfiguration guiConfig;
     private Metrics metrics;
+    private HeatSources heatSources;
 
     @Override
     public void onLoad() {
@@ -101,6 +103,13 @@ public final class TrailTalesDelightPlugin extends JavaPlugin {
 
         metrics = new Metrics(this, BSTATS_PLUGIN_ID);
         api.registerAddonBlockNamespace(NAMESPACE);
+        heatSources = HeatSources.of(this);
+        if (!heatSources.addCustomBlock(NAMESPACE + ":mud_stove[fire=true]")) {
+            getLogger().warning(AddonLang.get(
+                    "plugin.heat-source-registration-failed",
+                    "Could not register the lit mud stove as a FarmersDelight heat source."
+            ));
+        }
         guiConfig = loadGuiConfig();
         recipeType = new TrailRecipeType();
         recipeType.setBook(TrailRecipeBookConfig.fromConfig(
@@ -123,6 +132,10 @@ public final class TrailTalesDelightPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        if (heatSources != null) {
+            heatSources.clear();
+            heatSources = null;
+        }
         if (metrics != null) {
             metrics.shutdown();
             metrics = null;

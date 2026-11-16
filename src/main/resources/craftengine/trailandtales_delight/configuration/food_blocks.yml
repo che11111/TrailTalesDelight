@@ -30,7 +30,7 @@ templates:
           default: north
       appearances:
         bite0_east:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -39,7 +39,7 @@ templates:
             translation: 0,0,0
             yaw: 90
         bite0_north:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -47,7 +47,7 @@ templates:
             scale: 1.0
             translation: 0,0,0
         bite0_south:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -56,7 +56,7 @@ templates:
             translation: 0,0,0
             yaw: 180
         bite0_west:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -65,7 +65,7 @@ templates:
             translation: 0,0,0
             yaw: 270
         bite1_east:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -74,7 +74,7 @@ templates:
             translation: 0,0,0
             yaw: 90
         bite1_north:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -82,7 +82,7 @@ templates:
             scale: 1.0
             translation: 0,0,0
         bite1_south:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -91,7 +91,7 @@ templates:
             translation: 0,0,0
             yaw: 180
         bite1_west:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -100,7 +100,7 @@ templates:
             translation: 0,0,0
             yaw: 270
         bite2_east:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -109,7 +109,7 @@ templates:
             translation: 0,0,0
             yaw: 90
         bite2_north:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -117,7 +117,7 @@ templates:
             scale: 1.0
             translation: 0,0,0
         bite2_south:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -126,7 +126,7 @@ templates:
             translation: 0,0,0
             yaw: 180
         bite2_west:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -135,7 +135,7 @@ templates:
             translation: 0,0,0
             yaw: 270
         bite3_east:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -144,7 +144,7 @@ templates:
             translation: 0,0,0
             yaw: 90
         bite3_north:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -152,7 +152,7 @@ templates:
             scale: 1.0
             translation: 0,0,0
         bite3_south:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display
@@ -161,7 +161,7 @@ templates:
             translation: 0,0,0
             yaw: 180
         bite3_west:
-          state: structure_void
+          state: minecraft:soul_campfire[facing=south,lit=false,signal_fire=true,waterlogged=false]
           transparent: true
           entity_renderer:
             type: item_display

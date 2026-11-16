@@ -71,7 +71,7 @@ Implemented:
 
 - 33 items, 13 blocks, and all associated models and textures.
 - Food effects, potion effects, container returns, slicing, and feast interactions.
-- The pottery cooking pot, mud stove, curd aging, lantern fruit crops, and loot integrations.
+- The pottery cooking pot, state-aware mud stove heat, curd aging, lantern fruit crops, Nourishment, and loot integrations.
 - Crafting table, furnace, smoker, campfire, or FarmersDelight cooking-pot recipes for every food and drink.
 
 Additional port features:
@@ -104,10 +104,10 @@ All custom blocks use `item_display` entities for visual rendering.
 | Sniffer Eggshell | `trailandtales_delight:sniffer_eggshell` | `barrier` | Full-block collision |
 | Budding Lantern Fruit | `trailandtales_delight:budding_lantern_fruit` | `auto_state` | State changes with crop growth |
 | Mature Lantern Fruit Vine | `trailandtales_delight:lantern_fruits` | `auto_state` | State changes with vine growth |
-| Curd Block | `trailandtales_delight:curd_block` | `structure_void` | No collision; model changes with ripening stage |
-| Cheese Wheel | `trailandtales_delight:cheese_wheel` | `structure_void` | No collision; model changes with remaining slices |
-| Cherry Cake | `trailandtales_delight:cherry_cake` | `structure_void` | No collision; model changes with remaining slices |
-| Cherry Cheese Pie | `trailandtales_delight:cherry_cheese_pie` | `structure_void` | No collision; model changes with remaining slices |
+| Curd Block | `trailandtales_delight:curd_block` | `soul_campfire` | Shared soul campfire collision; model changes with ripening stage |
+| Cheese Wheel | `trailandtales_delight:cheese_wheel` | `soul_campfire` | Shared soul campfire collision; model changes with remaining slices |
+| Cherry Cake | `trailandtales_delight:cherry_cake` | `soul_campfire` | Shared soul campfire collision; model changes with remaining slices |
+| Cherry Cheese Pie | `trailandtales_delight:cherry_cheese_pie` | `soul_campfire` | Shared soul campfire collision; model changes with remaining slices |
 | Cooked Sniffer Egg | `trailandtales_delight:cooked_sniffer_egg_block` | `barrier` | Full-block collision; model changes with remaining servings |
 | Stuffed Sniffer Egg | `trailandtales_delight:stuffed_sniffer_egg_block` | `barrier` | Full-block collision; model changes with remaining servings |
 

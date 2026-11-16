@@ -71,7 +71,7 @@
 
 - 33 个物品、13 个方块及全部模型和纹理。
 - 食物效果、药水效果、容器返还、切片与盛宴交互。
-- 陶锅、泥炉灶、凝乳熟成、灯笼果作物和战利品扩展。
+- 陶锅、仅点燃时供热的泥炉灶、凝乳熟成、灯笼果作物、滋养效果和战利品扩展。
 - 所有食品和饮品均有工作台、熔炉、烟熏炉、营火或 FarmersDelight 烹饪锅配方。
 
 额外实现：
@@ -104,10 +104,10 @@
 | 嗅探兽蛋壳 | `trailandtales_delight:sniffer_eggshell` | `barrier` | 完整方块碰撞 |
 | 萌芽灯笼果 | `trailandtales_delight:budding_lantern_fruit` | `auto_state` | 按作物生长阶段切换状态 |
 | 成熟灯笼果藤 | `trailandtales_delight:lantern_fruits` | `auto_state` | 按藤蔓生长阶段切换状态 |
-| 凝乳块 | `trailandtales_delight:curd_block` | `structure_void` | 无碰撞；按熟成阶段切换模型 |
-| 奶酪轮 | `trailandtales_delight:cheese_wheel` | `structure_void` | 无碰撞；按剩余片数切换模型 |
-| 樱花蛋糕 | `trailandtales_delight:cherry_cake` | `structure_void` | 无碰撞；按剩余片数切换模型 |
-| 樱花奶酪派 | `trailandtales_delight:cherry_cheese_pie` | `structure_void` | 无碰撞；按剩余片数切换模型 |
+| 凝乳块 | `trailandtales_delight:curd_block` | `soul_campfire` | 共用篝火碰撞箱；按熟成阶段切换模型 |
+| 奶酪轮 | `trailandtales_delight:cheese_wheel` | `soul_campfire` | 共用篝火碰撞箱；按剩余片数切换模型 |
+| 樱花蛋糕 | `trailandtales_delight:cherry_cake` | `soul_campfire` | 共用篝火碰撞箱；按剩余片数切换模型 |
+| 樱花奶酪派 | `trailandtales_delight:cherry_cheese_pie` | `soul_campfire` | 共用篝火碰撞箱；按剩余片数切换模型 |
 | 烤嗅探兽蛋 | `trailandtales_delight:cooked_sniffer_egg_block` | `barrier` | 完整方块碰撞；按剩余份数切换模型 |
 | 填馅嗅探兽蛋 | `trailandtales_delight:stuffed_sniffer_egg_block` | `barrier` | 完整方块碰撞；按剩余份数切换模型 |
 
